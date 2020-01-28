@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id "com.diffplug.gradle.swt.nativedeps" version "3.17.6"
+}
+
+group 'Projekt_MAS'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url 'https://mvnrepository.com/artifact/net.kemitix/sqlite-dialect'}
+
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation "org.hibernate:hibernate-core:5.4.3.Final"
+    implementation "org.eclipse:swt:3.3.0-v3346"
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.16'
+}

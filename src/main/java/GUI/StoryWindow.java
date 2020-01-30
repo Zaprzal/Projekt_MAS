@@ -46,7 +46,7 @@ public class StoryWindow {
         Text vinInput = new Text(servisManagment, SWT.BORDER);
         vinInput.setMessage("Podaj Vin pojazdu");
         vinInput.setBounds(110, 10, 190, 20);
-        vinInput.setVisible(true);
+
 
         Button btnSzukaj = new Button(servisManagment, SWT.NONE);
         btnSzukaj.setBounds(320, 10, 120, 20);

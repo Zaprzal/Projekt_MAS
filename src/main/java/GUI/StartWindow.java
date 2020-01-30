@@ -12,10 +12,6 @@ import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.widgets.Monitor;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.util.HashSet;
-
 public class StartWindow {
 
     protected Shell shlGarageManagement;

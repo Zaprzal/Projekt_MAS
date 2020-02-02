@@ -88,11 +88,11 @@ public class Transakcja {
         return sprzedajacy;
     }
 
-    public void setSprzedajacy(Osoba sprzedajacy) {
-        if (this.sprzedajacy == null){
-            this.sprzedajacy = sprzedajacy;
-            sprzedajacy.addSprzedaz(this);
-        }
+    // public void setSprzedajacy(Osoba sprzedajacy) {
+    //     if (this.sprzedajacy == null){
+    //         this.sprzedajacy = sprzedajacy;
+    //         sprzedajacy.addSprzedaz(this);
+    //     }
 
-    }
+    // }
 }

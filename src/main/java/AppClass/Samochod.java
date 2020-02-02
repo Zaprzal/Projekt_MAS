@@ -13,7 +13,7 @@ import java.util.Map;
 @Setter
 @NoArgsConstructor
 public class Samochod {
-    @Column(name = "samochod_id")
+    @Column(name = "id_samochod")
     @Id
     @GeneratedValue(generator = "increment")
     private Integer id;
@@ -31,6 +31,7 @@ public class Samochod {
     private List<JazdaTestowa> odbyteJazdy = new ArrayList<>();
     @OneToMany
     private List<Serwis> historiaSerwisowa = new ArrayList<>();
+	@ManyToMany(mappedBy = "samochod")
     private List<AkcjaSerwisowa> wykonaneAkcje = new ArrayList<>();
     private Transakcja transakcja;
 

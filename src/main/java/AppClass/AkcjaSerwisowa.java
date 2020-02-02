@@ -1,87 +1,43 @@
 package AppClass;
-import org.hibernate.annotations.GenericGenerator;
+
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity(name = "AkcjaSerwisowa")
+@Entity
+@Table
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class AkcjaSerwisowa {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id_akcja")
     private Integer id;
+    @NonNull
     private List<String> czynnosci = new ArrayList<String>();
+    @NonNull
     private List<String> modeleObjete = new ArrayList<String>();
+    @NonNull
     private LocalDate dataRozpoczecia;
+    @NonNull
     private LocalDate dataZakonczenia;
+    @ManyToOne
+    @JoinColumn(name = "pracownik_serwisant")
     private Serwisant serwisant;
+    @ManyToMany(cascade = CascadeType.ALL)
+	@JoinTable(
+			name = "akcja_samochod",
+			joinColumns = { @JoinColumn(name = "id_akcja") },
+			inverseJoinColumns = { @JoinColumn(name = "id_samochod") }
+	)
     private List<Samochod> listaWykonanych = new ArrayList<Samochod>();
 
-    public AkcjaSerwisowa(List<String> czynnosci, List<String> modeleObjete, LocalDate dataRozpoczecia, LocalDate dataZakonczenia) {
-        this.czynnosci = czynnosci;
-        this.modeleObjete = modeleObjete;
-        this.dataRozpoczecia = dataRozpoczecia;
-        this.dataZakonczenia = dataZakonczenia;
-    }
-
-    public AkcjaSerwisowa() {
-    }
-
-    @ElementCollection
-    public List<String> getCzynnosci() {
-        return czynnosci;
-    }
-
-    public void setCzynnosci(List<String> czynnosci) {
-        this.czynnosci = czynnosci;
-    }
-    public void addCzynnosc(String czynnosc) {
-        this.czynnosci.add(czynnosc);
-    }
-    @ElementCollection
-    public List<String> getModeleObjete() {
-        return modeleObjete;
-    }
-
-    public void setModeleObjete(List<String> modeleObjete) {
-        this.modeleObjete = modeleObjete;
-    }
-    public void addModelObjety(String model) {
-        this.modeleObjete.add(model);
-    }
-
-    public LocalDate getDataRozpoczecia() {
-        return dataRozpoczecia;
-    }
-
-    public void setDataRozpoczecia(LocalDate dataRozpoczecia) {
-        this.dataRozpoczecia = dataRozpoczecia;
-    }
-
-    public LocalDate getDataZakonczenia() {
-        return dataZakonczenia;
-    }
-
-    public void setDataZakonczenia(LocalDate dataZakonczenia) {
-        this.dataZakonczenia = dataZakonczenia;
-    }
-
-
-
-    @Id
-    @GeneratedValue(generator = "increment")
-    @GenericGenerator(name = "increment", strategy = "increment")
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-    @ManyToOne
-    public Serwisant getSerwisant() {
-        return serwisant;
-    }
 
     public void setSerwisant(Serwisant serwisant) {
         if(this.serwisant==null){
@@ -89,14 +45,7 @@ public class AkcjaSerwisowa {
             serwisant.addAkcjeSerwisowa(this);
         }
     }
-    @ManyToMany
-    public List<Samochod> getListaWykonanych() {
-        return listaWykonanych;
-    }
 
-    public void setListaWykonanych(List<Samochod> listaWykonanych) {
-        this.listaWykonanych = listaWykonanych;
-    }
     public void addSamochodWykonany(Samochod samochod){
         if(!this.listaWykonanych.contains(samochod)){
             this.listaWykonanych.add(samochod);

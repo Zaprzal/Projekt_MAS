@@ -80,11 +80,11 @@ public class Usterka {
         return serwis;
     }
 
-    public void setSerwis(Serwis serwis) {
-        if (this.serwis == null){
-            this.serwis = serwis;
-            serwis.addUsterka(this);
-        }
+    // public void setSerwis(Serwis serwis) {
+    //     if (this.serwis == null){
+    //         this.serwis = serwis;
+    //         serwis.addUsterka(this);
+    //     }
 
-    }
+    // }
 }

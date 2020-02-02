@@ -1,8 +1,10 @@
 package AppClass;
 import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+
 
 @MappedSuperclass
 @Getter
@@ -12,8 +14,9 @@ import java.time.LocalDate;
 @RequiredArgsConstructor
 public abstract class Osoba implements Serializable {
 
+
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
     @NonNull
     private String email;
@@ -35,11 +38,6 @@ public abstract class Osoba implements Serializable {
     private String kodPocztowy;
     @NonNull
     private Integer numerTelefonu;
-
-
-    public Integer getId() {
-        return id;
-    }
 
 
     public void setPesel(String pesel) throws Exception {
@@ -66,4 +64,5 @@ public abstract class Osoba implements Serializable {
 
         this.pesel = pesel;
     }
+
 }

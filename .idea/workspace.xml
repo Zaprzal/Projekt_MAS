@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94c9e0c6-90ff-45b4-a1a9-cbab50ffbda4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/AppClass/SessionFac.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -13,10 +10,31 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AppClass/Osoba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AppClass/Osoba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/javax.servlet/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/javax.servlet/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.core.commands/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.core.commands/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.core.jobs/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.core.jobs/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.equinox.bidi/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.equinox.bidi/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.equinox.common/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.equinox.common/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.equinox.registry/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.equinox.registry/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.equinox.supplement/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.equinox.supplement/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.jface/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.jface/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.osgi.services/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.osgi.services/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.osgi.util/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.osgi.util/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.osgi/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.osgi/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.pde.ds.lib/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.pde.ds.lib/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.swt.cocoa.macosx.x86_64/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.swt.cocoa.macosx.x86_64/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.swt.gtk.linux.ppc64le/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.swt.gtk.linux.ppc64le/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.swt.gtk.linux.x86_64/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.swt.gtk.linux.x86_64/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.swt.win32.win32.x86_64/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.swt.win32.win32.x86_64/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.swt/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/maven/eclipse-swt-deps/org.eclipse.swt/maven-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/p2asmaven/token-eclipse-swt-deps" beforeDir="false" afterPath="$PROJECT_DIR$/build/p2asmaven/token-eclipse-swt-deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AppClass/JazdaTestowa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AppClass/JazdaTestowa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AppClass/Klient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AppClass/Klient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AppClass/Pracownik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AppClass/Pracownik.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AppClass/Prezes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AppClass/Prezes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AppClass/Samochod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AppClass/Samochod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AppClass/Serwis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AppClass/Serwis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AppClass/Serwisant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AppClass/Serwisant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AppClass/Transakcja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AppClass/Transakcja.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AppClass/Usterka.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AppClass/Usterka.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,6 +149,7 @@
       <workItem from="1580039360215" duration="6263000" />
       <workItem from="1580236985772" duration="4516000" />
       <workItem from="1580638597083" duration="12171000" />
+      <workItem from="1580754520830" duration="5274000" />
     </task>
     <servers />
   </component>
@@ -178,10 +197,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="548" y="108" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580046393157" />
-    <state x="655" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580638714936">
+    <state x="655" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1580754560334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="655" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580039364876" />
+    <state x="655" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580754560334" />
     <state x="655" y="345" key="com.intellij.ide.util.TipDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1580638714936" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1580642589319">
       <screen x="0" y="0" width="1920" height="1040" />

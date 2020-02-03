@@ -11,6 +11,7 @@ import java.util.Map;
 @Table
 @Getter
 @Setter
+@AllArgsConstructor
 @NoArgsConstructor
 public class Samochod {
     @Column(name = "id_samochod")
@@ -22,7 +23,7 @@ public class Samochod {
     @NonNull
     private String model;
     @NonNull
-    private int rokProdukcji;
+    private Integer rokProdukcji;
     @NonNull
     private String kodLakieru;
 //    private Klient wlasciciel;
@@ -33,6 +34,7 @@ public class Samochod {
     private List<Serwis> historiaSerwisowa = new ArrayList<>();
 	@ManyToMany(mappedBy = "samochod")
     private List<AkcjaSerwisowa> wykonaneAkcje = new ArrayList<>();
+	@OneToOne
     private Transakcja transakcja;
 
     public Samochod(String model, int rokProdukcji, String vin, String kodLakieru, List<String> wyposazenieDodatkowe) {
@@ -60,9 +62,6 @@ public class Samochod {
     }
 
 
-    public void setOdbyteJazdy(List<JazdaTestowa> odbyteJazdy) {
-        this.odbyteJazdy = odbyteJazdy;
-    }
     public void addOdbyteJazdy(JazdaTestowa odbyta){
         if(!this.odbyteJazdy.contains(odbyta)){
             this.odbyteJazdy.add(odbyta);

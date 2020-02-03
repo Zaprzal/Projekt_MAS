@@ -25,9 +25,10 @@ public class Serwis {
     private LocalDate data;
     @NonNull
     private Double wycena;
-    private List<String> wykonaneCzynnosci = new ArrayList<String>();
     @NonNull
-    private List<Usterka> usterkiDoWykonania = new ArrayList<>();
+    private List<String> wykonaneCzynnosci = new ArrayList<String>();
+    @OneToMany
+    private List<Usterka> usterkiDoWykonania = new ArrayList<Usterka>();
     @ManyToOne
     @JoinColumn(name = "pracownik_serwisant")
     private Serwisant serwisant;
@@ -36,21 +37,13 @@ public class Serwis {
     private Samochod samochod;
 
 
-//    @OneToMany
-//    public List<Usterka> getUsterkiDoWykonania() {
-//        return usterkiDoWykonania;
-//    }
-//
-//    public void setUsterkiDoWykonania(List<Usterka> usterkiDoWykonania) {
-//        this.usterkiDoWykonania = usterkiDoWykonania;
-//    }
-//
-//    public void addUsterka(Usterka usterka) {
-//        if (!this.usterkiDoWykonania.contains(usterka)){
-//            this.usterkiDoWykonania.add(usterka);
-//            usterka.setSerwis(this);
-//        }
-//    }
+
+    public void addUsterka(Usterka usterka) {
+        if (!this.usterkiDoWykonania.contains(usterka)){
+            this.usterkiDoWykonania.add(usterka);
+            usterka.setSerwis(this);
+        }
+    }
 
 
 

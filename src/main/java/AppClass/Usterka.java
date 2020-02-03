@@ -1,90 +1,47 @@
 package AppClass;
-import org.hibernate.annotations.GenericGenerator;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 
-@Entity(name = "Usterka")
+@Entity
+@Table
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Usterka {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id;
+    @NonNull
     private LocalDate data;
+    @NonNull
     private String opis;
+    @NonNull
     private String rodzaj;
+    @ManyToOne
+    @JoinColumn(name = "id_klienta")
     private Klient klient;
+    @ManyToOne
+    @JoinColumn(name = "serwis_usterki")
     private Serwis serwis;
 
 
-    public Usterka(LocalDate data, String opis, String rodzaj) {
-        this.data = data;
-        this.opis = opis;
-        this.rodzaj = rodzaj;
-    }
-
-    public Usterka() {
-    }
-
-    public LocalDate getData() {
-        return data;
-    }
-
-    public void setData(LocalDate data) {
-        this.data = data;
-    }
-
-    public String getOpis() {
-        return opis;
-    }
-
-    public void setOpis(String opis) {
-        this.opis = opis;
-    }
-
-    public String getRodzaj() {
-        return rodzaj;
-    }
-
-    public void setRodzaj(String rodzaj) {
-        this.rodzaj = rodzaj;
-    }
-
-    @Id
-    @GeneratedValue(generator = "increment")
-    @GenericGenerator(name = "increment", strategy = "increment")
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-
-    @ManyToOne
-    public Klient getKlient() {
-        return klient;
-    }
 
     public void setKlient(Klient klient) {
         if (this.klient == null){
             this.klient = klient;
             klient.addZgloszenieUsterki(this);
         }
-
-    }
-    @ManyToOne
-    public Serwis getSerwis() {
-        return serwis;
     }
 
-    // public void setSerwis(Serwis serwis) {
-    //     if (this.serwis == null){
-    //         this.serwis = serwis;
-    //         serwis.addUsterka(this);
-    //     }
-
-    // }
+     public void setSerwis(Serwis serwis) {
+         if (this.serwis == null){
+             this.serwis = serwis;
+             serwis.addUsterka(this);
+         }
+     }
 }

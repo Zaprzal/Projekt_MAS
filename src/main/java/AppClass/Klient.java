@@ -17,10 +17,13 @@ import java.util.List;
 @AllArgsConstructor
 public class Klient extends Osoba{
 
+    @OneToMany
     private List<JazdaTestowa> odbyteJazdy;
+    @OneToMany
     private List<Usterka> zgloszoneUsterki;
+    @OneToMany
     private List<Transakcja> historiaTransakcji;
-    private List<Samochod> listaSamochodow;
+
 
 
 

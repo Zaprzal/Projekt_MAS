@@ -21,11 +21,11 @@ public class Prezes extends Osoba{
     private List<Transakcja> listaTransakcji = new ArrayList<Transakcja>();
 
 
-    public void addSprzedaz(Transakcja transakcja) {
-        if(!this.listaTransakcji.contains(transakcja)){
-            this.listaTransakcji.add(transakcja);
-            transakcja.setSprzedajacy(this);
-        }
-    }
+//    public void addSprzedaz(Transakcja transakcja) {
+//        if(!this.listaTransakcji.contains(transakcja)){
+//            this.listaTransakcji.add(transakcja);
+//            transakcja.setSprzedajacy(this);
+//        }
+//    }
 
 }

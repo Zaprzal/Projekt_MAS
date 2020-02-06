@@ -7,7 +7,11 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
+/**
+ * uzyskanie połączenia z bazą danych MySQL za pomocą hibernate
+ */
 public class SessionFac {
+
     private static SessionFactory sessionFactory;
 
     private static Session session;

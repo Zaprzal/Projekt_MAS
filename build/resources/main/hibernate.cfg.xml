@@ -16,5 +16,14 @@
         <property name="show_sql">true</property>
         <property name="hibernate.current_session_context_class">thread</property>
         <mapping class="AppClass.Osoba"/>
+        <mapping class="AppClass.Serwis"/>
+        <mapping class="AppClass.Serwisant"/>
+        <mapping class="AppClass.JazdaTestowa"/>
+        <mapping class="AppClass.Klient"/>
+        <mapping class="AppClass.Transakcja"/>
+        <mapping class="AppClass.Samochod"/>
+        <mapping class="AppClass.Usterka"/>
+        <mapping class="AppClass.AkcjaSerwisowa"/>
+        <mapping class="AppClass.Pracownik"/>
     </session-factory>
 </hibernate-configuration>

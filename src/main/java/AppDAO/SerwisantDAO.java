@@ -86,7 +86,7 @@ public class SerwisantDAO  implements AnyDAOInterface<Serwisant, Integer> {
 
     @Override
     public List<Serwisant> findAll() {
-        return getCurrentSession().createQuery("from Klient").list();
+        return getCurrentSession().createQuery("from Serwisant").list();
     }
 
     @Override

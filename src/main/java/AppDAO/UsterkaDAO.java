@@ -86,7 +86,7 @@ public class UsterkaDAO implements AnyDAOInterface<Usterka, Integer> {
 
     @Override
     public List<Usterka> findAll() {
-        return getCurrentSession().createQuery("from Klient").list();
+        return getCurrentSession().createQuery("from Usterka").list();
     }
 
     @Override

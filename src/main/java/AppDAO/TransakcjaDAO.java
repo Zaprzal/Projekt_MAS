@@ -86,7 +86,7 @@ public class TransakcjaDAO implements AnyDAOInterface<Transakcja, Integer> {
 
     @Override
     public List<Transakcja> findAll() {
-        return getCurrentSession().createQuery("from Klient").list();
+        return getCurrentSession().createQuery("from Transakcja").list();
     }
 
     @Override

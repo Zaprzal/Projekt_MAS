@@ -18,9 +18,9 @@ import java.util.List;
 public class Serwisant extends Osoba{
     @NonNull
     private Integer pensja;
-    private List<String> wyksztalcenie = new ArrayList<String>();
     @OneToMany
     private List<Serwis> wykonaneSerwisy = new ArrayList<>();
+    @OneToMany
     private List<AkcjaSerwisowa> wykonywaneAkcjeSerwisowe = new ArrayList<>();
 
     public void addWykonanySerwis(Serwis serwis) {

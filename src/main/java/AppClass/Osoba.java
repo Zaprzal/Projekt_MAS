@@ -9,9 +9,9 @@ import java.time.LocalDate;
 @MappedSuperclass
 @Getter
 @Setter
+@Table
 @NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor
 public abstract class Osoba implements Serializable {
 
 

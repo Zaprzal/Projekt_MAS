@@ -32,6 +32,7 @@ public class SerwisService {
         return serwis;
     }
 
+
     public void delete(Integer id) {
         dao.openCurrentSessionwithTransaction();
         Serwis serwis = dao.findById(id);
@@ -55,4 +56,6 @@ public class SerwisService {
     public SerwisDAO dao() {
         return dao;
     }
+
+
 }

@@ -27,7 +27,7 @@ public class SamochodService {
         dao.closeCurrentSessionwithTransaction();
     }
 
-    public Samochod findById(Integer id) {
+    public Samochod findById(String id) {
         dao.openCurrentSession();
         Samochod samochod = dao.findById(id);
         dao.closeCurrentSession();

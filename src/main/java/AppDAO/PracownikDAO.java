@@ -86,7 +86,7 @@ public class PracownikDAO implements AnyDAOInterface<Pracownik, Integer> {
 
     @Override
     public List<Pracownik> findAll() {
-        return getCurrentSession().createQuery("from Klient").list();
+        return getCurrentSession().createQuery("from Pracownik").list();
     }
 
     @Override

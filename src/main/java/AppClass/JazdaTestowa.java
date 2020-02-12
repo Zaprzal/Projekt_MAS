@@ -8,12 +8,14 @@ import java.time.LocalDate;
 
 @Entity
 @Getter
+@Table
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class JazdaTestowa {
-
-    private int jazdaId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int id;
     private LocalDate data;
     private int limitKilometrow;
     private Integer ocena = null;
@@ -21,6 +23,7 @@ public class JazdaTestowa {
     @JoinColumn(name = "id_klienta")
     private Klient klient;
     @ManyToOne
+    @JoinColumn(name = "id_samochod")
     private Samochod samochod;
 
     public void setKlient(Klient klient) {

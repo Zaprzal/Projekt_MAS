@@ -85,7 +85,7 @@ public class AkcjaSerwisowaDAO implements AnyDAOInterface<AkcjaSerwisowa, Intege
 
     @Override
     public List<AkcjaSerwisowa> findAll() {
-        return getCurrentSession().createQuery("from Klient").list();
+        return getCurrentSession().createQuery("from AkcjaSerwisowa").list();
     }
 
     @Override

@@ -2,6 +2,7 @@ package AppDAO;
 
 import AppClass.AnyDAOInterface;
 
+import AppClass.Samochod;
 import AppClass.Serwis;
 import AppClass.SessionFac;
 import org.hibernate.Session;
@@ -11,8 +12,6 @@ import org.hibernate.Transaction;
 import java.util.List;
 
 public class SerwisDAO  implements AnyDAOInterface<Serwis, Integer> {
-
-    private static SessionFactory sessionFactory;
 
     private static Session currentSession;
 
@@ -78,7 +77,6 @@ public class SerwisDAO  implements AnyDAOInterface<Serwis, Integer> {
     }
 
 
-
     @Override
     public void delete(Serwis entity) {
         getCurrentSession().delete(entity);
@@ -86,8 +84,9 @@ public class SerwisDAO  implements AnyDAOInterface<Serwis, Integer> {
 
     @Override
     public List<Serwis> findAll() {
-        return getCurrentSession().createQuery("from Klient").list();
+        return getCurrentSession().createQuery("from Serwis").list();
     }
+
 
     @Override
     public void deleteAll() {

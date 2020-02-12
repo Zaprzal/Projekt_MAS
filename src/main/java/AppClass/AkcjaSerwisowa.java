@@ -5,10 +5,12 @@ import lombok.*;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
-@Table
+@Table(name = "AkcjaSerwisowa")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -20,9 +22,7 @@ public class AkcjaSerwisowa {
     @Column(name = "id_akcja")
     private Integer id;
     @NonNull
-    private List<String> czynnosci = new ArrayList<String>();
-    @NonNull
-    private List<String> modeleObjete = new ArrayList<String>();
+    private String czynnosci;
     @NonNull
     private LocalDate dataRozpoczecia;
     @NonNull
@@ -31,12 +31,7 @@ public class AkcjaSerwisowa {
     @JoinColumn(name = "pracownik_serwisant")
     private Serwisant serwisant;
     @ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(
-			name = "akcja_samochod",
-			joinColumns = { @JoinColumn(name = "id_akcja") },
-			inverseJoinColumns = { @JoinColumn(name = "id_samochod") }
-	)
-    private List<Samochod> listaWykonanych = new ArrayList<Samochod>();
+    private Set<Samochod> naprawioneSamochody;
 
 
     public void setSerwisant(Serwisant serwisant) {
@@ -46,9 +41,9 @@ public class AkcjaSerwisowa {
         }
     }
 
-    public void addSamochodWykonany(Samochod samochod){
-        if(!this.listaWykonanych.contains(samochod)){
-            this.listaWykonanych.add(samochod);
+    public void addSamochodWykonanaAkcja(Samochod samochod){
+        if(!this.naprawioneSamochody.contains(samochod)){
+            this.naprawioneSamochody.add(samochod);
             samochod.addWykonanaAkcjaSerwisowa(this);
         }
     }

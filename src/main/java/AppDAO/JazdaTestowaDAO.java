@@ -86,7 +86,7 @@ public class JazdaTestowaDAO implements AnyDAOInterface<JazdaTestowa, Integer> {
 
     @Override
     public List<JazdaTestowa> findAll() {
-        return getCurrentSession().createQuery("from Klient").list();
+        return getCurrentSession().createQuery("from JazdaTestowa").list();
     }
 
     @Override

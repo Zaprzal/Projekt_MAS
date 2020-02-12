@@ -70,11 +70,20 @@ public class SamochodDAO implements AnyDAOInterface<Samochod, Integer> {
         getCurrentSession().update(entity);
     }
 
-
-
     @Override
     public Samochod findById(Integer integer) {
-        return getCurrentSession().get(Samochod.class, integer);
+        return null;
+    }
+
+
+    public Samochod findById(String integer) {
+        Samochod s = null;
+        try{
+            s = getCurrentSession().get(Samochod.class, integer);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return s;
     }
 
 
@@ -86,7 +95,7 @@ public class SamochodDAO implements AnyDAOInterface<Samochod, Integer> {
 
     @Override
     public List<Samochod> findAll() {
-        return getCurrentSession().createQuery("from Klient").list();
+        return getCurrentSession().createQuery("from Samochod").list();
     }
 
     @Override

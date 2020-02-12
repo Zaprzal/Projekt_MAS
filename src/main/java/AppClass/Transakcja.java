@@ -8,10 +8,13 @@ import java.time.LocalDate;
 @Entity
 @Getter
 @Setter
+@Table
 @AllArgsConstructor
 @NoArgsConstructor
 public class Transakcja {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
     private LocalDate data;
     private double cenaAuta;
@@ -19,8 +22,12 @@ public class Transakcja {
     @OneToOne
     @JoinColumn(name = "id_samochod")
     private Samochod samochod;
+    @ManyToOne
+    @JoinColumn(name = "id_klient")
     private Klient klient;
-    private Osoba sprzedajacy;
+    @ManyToOne
+    @JoinColumn(name = "id_sprzedajacy")
+    private Pracownik sprzedajacy;
 
 
     public void setSamochod(Samochod samochod) {
@@ -37,10 +44,10 @@ public class Transakcja {
         }
     }
 
-    // public void setSprzedajacy(Osoba sprzedajacy) {
-    //     if (this.sprzedajacy == null){
-    //         this.sprzedajacy = sprzedajacy;
-    //         sprzedajacy.addSprzedaz(this);
-    //     }
-    // }
+     public void setSprzedajacy(Pracownik sprzedajacy) {
+         if (this.sprzedajacy == null){
+             this.sprzedajacy = sprzedajacy;
+             sprzedajacy.addSprzedaz(this);
+         }
+     }
 }

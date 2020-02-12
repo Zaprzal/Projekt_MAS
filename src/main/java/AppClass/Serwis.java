@@ -22,17 +22,17 @@ public class Serwis {
     @NonNull
     private Integer aktualnyPrzebieg;
     @NonNull
+    private String opis;
+    @NonNull
     private LocalDate data;
     @NonNull
     private Double wycena;
-    @NonNull
-    private List<String> wykonaneCzynnosci = new ArrayList<String>();
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="id", orphanRemoval = true)
     private List<Usterka> usterkiDoWykonania = new ArrayList<Usterka>();
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "pracownik_serwisant")
     private Serwisant serwisant;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "serwis_samochod")
     private Samochod samochod;
 
@@ -62,4 +62,14 @@ public class Serwis {
         }
 
     }
+    public String getCarVin(){
+        return samochod.getVin();
+    }
+
+//    public Serwis(Integer przebieg , String opis , LocalDate dateWykonania , Double wycena) {
+//        this.aktualnyPrzebieg = przebieg;
+//        this.opis = opis;
+//        this.data = dateWykonania;
+//        this.wycena = wycena;
+//    }
 }
